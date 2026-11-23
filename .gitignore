@@ -1,0 +1,8 @@
+.DS_Store
+/atlas-data
+data/**/*.f32.bin
+__pycache__/
+*.pyc
+*.part
+*.tmp
+node_modules/
