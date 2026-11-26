@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>21cm · 参数与推断图谱</title>
+  <link rel="preload" href="./assets/fonts/jost-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./cavity.css?v=quiet-toggle-20261018">
+  <link rel="stylesheet" href="./explorer.css">
+</head>
+<body class="cavity-page explorer-page">
+  <header class="sample-header">
+    <a class="sample-brand" href="./">21<span>cm</span><i aria-hidden="true"></i></a>
+    <div class="sample-heading">
+      <h1>参数与推断图谱</h1>
+      <p>UV LF · 光锥与全局演化 · 5×5 LF-only 与 8D MCMC</p>
+    </div>
+    <nav class="portal-nav" aria-label="21cm 统一视图">
+      <a href="./cavity.html"><small>3D</small>体数据</a>
+      <a href="./atlas.html"><small>2D</small>切片库</a>
+      <a href="./explorer.html" aria-current="page"><small>1D</small>参数与推断</a>
+    </nav>
+    <nav class="field-switch explorer-views" aria-label="图谱子视图">
+      <button type="button" data-view="main" aria-pressed="true">主图谱</button>
+      <button type="button" data-view="mcmc" aria-pressed="false">MCMC</button>
+      <button type="button" data-view="walkers" aria-pressed="false">收敛轨迹</button>
+      <button type="button" data-view="park" aria-pressed="false">Park/PL</button>
+      <button type="button" data-view="mass" aria-pressed="false">质量–UV</button>
+    </nav>
+    <a id="explorer-external" class="explorer-ext" href="https://hainahuang729.github.io/21cm-cosmic-dawn-atlas/" target="_blank" rel="noopener">新窗口 ↗</a>
+  </header>
+
+  <main class="explorer-main">
+    <div class="explorer-bar">
+      <span id="explorer-view-label" class="explorer-subtitle">参数控制 · 21 cm 光锥 · UV LF · 全局演化与 τe</span>
+      <div class="explorer-links" aria-label="关联仓库">
+        <a href="https://github.com/HainaHuang729/early-galaxies-reionization-bt" target="_blank" rel="noopener">Track A PRD ↗</a>
+        <a href="https://github.com/HainaHuang729/21cm-reionization-emulator" target="_blank" rel="noopener">Track B Emulator ↗</a>
+        <a href="https://github.com/HainaHuang729/21cm-cosmic-dawn-atlas" target="_blank" rel="noopener">Data Archive ↗</a>
+      </div>
+    </div>
+    <div class="explorer-stage">
+      <iframe
+        id="explorer-frame"
+        title="21cm Cosmic Dawn Atlas 交互式参数与 MCMC 图谱"
+        src="https://hainahuang729.github.io/21cm-cosmic-dawn-atlas/?embed=1"
+        loading="eager"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <div id="explorer-loading" class="explorer-loading" role="status">正在加载交互式参数与 MCMC 图谱…</div>
+      <div id="explorer-fallback" class="explorer-fallback" hidden>
+        <p>嵌入视图加载较慢或被当前网络拦截，可直接在新窗口打开完整图谱：</p>
+        <a id="explorer-fallback-link" href="https://hainahuang729.github.io/21cm-cosmic-dawn-atlas/" target="_blank" rel="noopener">打开 21cm-cosmic-dawn-atlas ↗</a>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./explorer.js"></script>
+</body>
+</html>

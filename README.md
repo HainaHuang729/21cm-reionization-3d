@@ -1,18 +1,20 @@
-# 21cm 三维 Viewer
+# 21cm 统一交互展示门户（3D / 2D / 1D）
 
 [工作总览](WORK_INDEX.md) · [文件索引](FILE_INDEX.md)
 
-独立运行的最终三维版本，使用真实 21cmFAST 数据。界面采用个人网页的冷雾蓝灰风格，支持红移播放、折叠调参和全屏。没有构建步骤或第三方运行依赖，未接入仓库主网页。
+统一整合 **3D 体数据 Viewer**、**2D 多场光锥切片库（13,920 张）** 与 **1D 参数 / UV LF / MCMC 推断图谱**（联动 [`21cm-cosmic-dawn-atlas`](https://github.com/HainaHuang729/21cm-cosmic-dawn-atlas)），使用真实 21cmFAST 数据，采用冷雾蓝灰风格，没有构建步骤或第三方运行依赖。
 
 ## 运行
 
-在此目录执行 `npm start`，打开 `http://127.0.0.1:8766/`。首页统一进入 `cavity.html`，保留地址中的 `model`、`field`、`z` 参数；旧三维实验页面和设计预览已移除。
+在此目录执行 `npm start`，打开 `http://127.0.0.1:8766/`。首页自动跳转至 `cavity.html` 并保留地址参数，页头统一切换三类视图：
 
 也可以使用任意静态服务器，通过 localhost 或 HTTPS 访问。数据 SHA-256 校验依赖安全上下文，不能直接双击 HTML 文件运行。
 
-- 三维：`cavity.html?model=pl&field=brightness_temperature&z=6`
-- 密度：`cavity.html?model=pl&field=density&z=6`
-- 二维切片库：`atlas.html`
+- 3D 体数据：`cavity.html?model=pl&field=brightness_temperature&z=6`（中性氢 `xH` / 密度 `density` / 亮温 `brightness_temperature`）
+- 2D 切片库：`atlas.html`（55 组 BPL + 32 组匹配 PL × 32 红移 × 5 物理场 = 13,920 张切片）
+- 1D 参数与推断图谱：`explorer.html`（内嵌 `21cm-cosmic-dawn-atlas` 主图谱、5×5 LF-only 与 8D MCMC、Walker 收敛轨迹、Park/PL 对照及质量–UV 响应）
+
+关联论文仓库：Track A 物理主稿 [`early-galaxies-reionization-bt`](https://github.com/HainaHuang729/early-galaxies-reionization-bt) · Track B 模拟器方法稿 [`21cm-reionization-emulator`](https://github.com/HainaHuang729/21cm-reionization-emulator)。
 
 [最终界面](preview-final.png) · [全屏](preview-final-fullscreen.png) · [窄窗口](preview-final-mobile.png)
 

@@ -1,0 +1,50 @@
+.explorer-page { padding-bottom: 0; }
+.explorer-views { margin-left: auto; }
+.explorer-views > button { min-width: 66px; padding: 10px 12px; font-size: 11px; white-space: nowrap; }
+.explorer-ext {
+  display: inline-flex; align-items: center; min-height: 32px; padding: 6px 11px;
+  border: 1px solid var(--line-strong); color: var(--ink); font-size: 11px;
+  text-decoration: none; white-space: nowrap;
+}
+.explorer-ext:hover { background: var(--surface); border-color: var(--accent); color: var(--accent); }
+
+.explorer-main {
+  max-width: var(--content-width); margin: auto;
+  padding: 12px var(--page-pad) 16px;
+}
+.explorer-bar {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  gap: 10px 18px; padding-bottom: 10px; font-size: 11px; color: var(--muted);
+}
+.explorer-links { display: flex; flex-wrap: wrap; gap: 14px; font-family: var(--font-mono); font-size: 10px; }
+.explorer-links a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+.explorer-links a:hover { border-bottom-color: var(--accent); }
+
+.explorer-stage {
+  position: relative; width: 100%; height: max(540px, calc(100dvh - 150px));
+  border: 1px solid var(--line); background: #e8e7df; overflow: hidden;
+}
+.explorer-stage > iframe { display: block; width: 100%; height: 100%; border: 0; background: #e8e7df; }
+.explorer-loading {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  background: rgba(237, 242, 245, 0.92); color: var(--ink); font-size: 12px;
+  pointer-events: none; transition: opacity 200ms ease;
+}
+.explorer-loading.is-hidden { opacity: 0; }
+.explorer-fallback {
+  position: absolute; left: 16px; right: 16px; bottom: 16px;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+  padding: 12px 16px; border: 1px solid var(--line-strong); background: var(--background); color: var(--ink); font-size: 11px;
+}
+.explorer-fallback a { color: var(--accent); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width:1180px) {
+  .explorer-views { margin-left: 0; }
+  .explorer-ext { order: 6; margin-left: auto; }
+}
+@media (max-width:600px) {
+  .explorer-views { grid-column: 1 / -1; grid-row: 4; flex-wrap: wrap; }
+  .explorer-views > button { flex: 1 1 auto; min-width: 58px; padding: 7px 6px; font-size: 10px; }
+  .explorer-ext { grid-column: 2; grid-row: 2; justify-self: end; }
+  .explorer-stage { height: max(480px, calc(100dvh - 210px)); }
+}
