@@ -46,7 +46,7 @@ def jobs_for(registry, all_sample):
                 default=f'data/{local_folder}/{descriptor["url"]}' if local_folder else f'data/{model}/{snapshot["id"]}/{field}.f32.bin'
                 relative = Path(registered).as_posix() if registered else default
                 revision=REVISION if fine else REVISIONS[model]
-                url = f'https://raw.githubusercontent.com/HainaHuang729/21cmTB/{revision}/{source_directory}/{descriptor["url"]}'
+                url = f'https://raw.githubusercontent.com/HainaHuang729/21cm-cosmic-dawn-atlas/{revision}/{source_directory}/{descriptor["url"]}'
                 jobs.append((prefix + field, relative, url, descriptor['sha256'], descriptor['byteLength']))
     return jobs
 

@@ -69,7 +69,7 @@
 | [atlas-data.js](atlas-data.js) | 切片索引、哈希、解压、量化值解码及色表 |
 | [atlas.css](atlas.css) | 切片库布局和样式 |
 | [chrome.js](chrome.js) | 二维切片库底部控制台折叠 |
-| `atlas-data` | 指向本地 `web_data/` 目录的符号链接（来自 `21cmTB`）；未纳入 Git |
+| `atlas-data` | 本地存放二维切片数据的目录（来自 `21cm-cosmic-dawn-atlas` 的 `web_data/`）；未纳入 Git |
 | `atlas-data/index.json` | 55 组 BPL、32 组 PL 的索引和参数元数据（外部 `web_data/`） |
 | `atlas-data/runs/` / `atlas-data/pl/` | 模型 JSON 描述及压缩的五场 `.slices.bin`（外部 `web_data/`，远程部署时回退上游提交） |
 

@@ -10,7 +10,7 @@
 | 三维目录首页 | [index.html](index.html) | 跳转到 `cavity.html`，保留 URL 参数 |
 | 二维切片库 | [atlas.html](atlas.html) | 55 组 BPL、32 组 PL，每组 32 个红移和五个物理场 |
 | 三维操作说明 | [README.md](README.md) | 显示约定、播放、缓存、数据来源与校验 |
-| 主网页参数图谱（另一仓库） | `21cmTB` 仓库 `index.html` / `README.md` | 预计算 BPL 与匹配 PL 主站，独立维护于 `HainaHuang729/21cmTB` |
+| 主网页参数图谱（另一仓库） | `21cm-cosmic-dawn-atlas` 仓库 `index.html` / `README.md` | 预计算 BPL 与匹配 PL 主站，独立维护于 `HainaHuang729/21cm-cosmic-dawn-atlas` |
 
 ## 已完成工作
 
@@ -35,7 +35,7 @@ BT 的验证采用分步对照：保留冷启动独立密度检查，再共享�
 
 - 当前三维 Viewer：510 个场文件，合计 1,700 MiB。
 - 本地磁盘保留原值：535 个 `.f32.bin` 文件、合计 1,725 MiB（包含当前三维 Viewer 的 510 个活跃文件 1,700 MiB，以及独立 100 cMpc 参考的 25 个缓存文件 25 MiB）。注册表有 547 个键，其中部分为同文件别名；这些二进制文件已由 `.gitignore` 忽略，不提交到本仓库 Git。已被替代的历史 `.f32.bin` 与 64³ 密度文件已清理，历史清单与验证凭据继续保留。
-- 二维库：55 + 32 组模型，共 13,920 张数值切片，使用外部 `21cmTB/web_data/index.json`（本地通过未跟踪符号链接 `atlas-data` 挂载，远程部署时回退上游公开文件）。
+- 二维库：55 + 32 组模型，共 13,920 张数值切片，使用外部 `21cm-cosmic-dawn-atlas/web_data/index.json`（本地通过未跟踪目录 `atlas-data/` 存放，远程部署时回退上游公开文件）。
 
 逐快照的路径查 [local-files.json](data/local-files.json)，网格、SHA-256、统计值和来源查 [PL 清单](data/pl-manifest.json) / [BT 清单](data/bt-manifest.json)。二维 lightcone 横截面不能拼成同一时刻的三维 coeval 盒子。
 
@@ -43,12 +43,12 @@ BT 的验证采用分步对照：保留冷启动独立密度检查，再共享�
 
 | 记录 | 值 |
 | --- | --- |
-| 本独立仓库主分支 | `main`（从 `21cmTB` 的 `codex/viewer-lab-cache-local` 提交 `3e2de01` 独立导出） |
+| 本独立仓库主分支 | `main`（从 `21cm-cosmic-dawn-atlas` 的 `codex/viewer-lab-cache-local` 提交 `3e2de01` 独立导出） |
 | 源三维分支历史提交 | `d1bf6c9c8fd0859da4e52400f6456fcdd0f19a42`、`3e2de011669a110c0722fbb436c3d9ce29dcc222` |
-| 三维数据远程回退提交 | `c1c12ff8e1342f83a986b819ac2b740744483180`（`HainaHuang729/21cmTB`，定义在 [data.js](data.js)） |
-| 二维及独立参考上游固定提交 | `7daaaca68ac6df4f9ccd95fbb1bbb16ecc042fc0`（`HainaHuang729/21cmTB`） |
+| 三维数据远程回退提交 | `c1c12ff8e1342f83a986b819ac2b740744483180`（`HainaHuang729/21cm-cosmic-dawn-atlas`，定义在 [data.js](data.js)） |
+| 二维及独立参考上游固定提交 | `7daaaca68ac6df4f9ccd95fbb1bbb16ecc042fc0`（`HainaHuang729/21cm-cosmic-dawn-atlas`） |
 
-本独立仓库可由 `main` 分支根目录直接通过 GitHub Pages 提供静态服务（含 `.nojekyll`）；主网页参数图谱仍由 `HainaHuang729/21cmTB` 的 `.github/workflows/pages.yml` 部署。
+本独立仓库可由 `main` 分支根目录直接通过 GitHub Pages 提供静态服务（含 `.nojekyll`）；主网页参数图谱仍由 `HainaHuang729/21cm-cosmic-dawn-atlas` 的 `.github/workflows/pages.yml` 部署。
 
 ## 启动和检查
 
@@ -83,4 +83,4 @@ npm test
 
 ## 来源与归档说明
 
-本文件夹从原 `21cmTB` 工作目录 `/Users/amadeus/Documents/ChatGPT/New project/viewer-lab/` 独立迁移而来；其余历史多项目目录与打包件归档于 `/Users/amadeus/Documents/ChatGPT/New project-archive/`。正式科学验证凭据位于 [science/](science/)。
+本文件夹从原 `21cm-cosmic-dawn-atlas`（原名 `21cmTB`）的 `viewer-lab/` 独立迁移而来；其余历史多项目目录与打包件归档于 `/Users/amadeus/Documents/ChatGPT/New project-archive/`。正式科学验证凭据位于 [science/](science/)。

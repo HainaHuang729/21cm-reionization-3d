@@ -3,11 +3,11 @@ import { abortable, volumeKey } from './volume-cache.js';
 
 export const REVISION = 'c1c12ff8e1342f83a986b819ac2b740744483180';
 export const UPSTREAM_REVISION = '7daaaca68ac6df4f9ccd95fbb1bbb16ecc042fc0';
-export const REMOTE = `https://raw.githubusercontent.com/HainaHuang729/21cmTB/${UPSTREAM_REVISION}/viewer-data64/pl-bt-v1/`;
-export const GITHUB_ROOT = `https://raw.githubusercontent.com/HainaHuang729/21cmTB/${UPSTREAM_REVISION}/`;
+export const REMOTE = `https://raw.githubusercontent.com/HainaHuang729/21cm-cosmic-dawn-atlas/${UPSTREAM_REVISION}/viewer-data64/pl-bt-v1/`;
+export const GITHUB_ROOT = `https://raw.githubusercontent.com/HainaHuang729/21cm-cosmic-dawn-atlas/${UPSTREAM_REVISION}/`;
 export const DATASETS = {
-  pl: {label:'PL · 250 cMpc', base:`https://raw.githubusercontent.com/HainaHuang729/21cmTB/${REVISION}/viewer-lab/data/pl-thermal-fixed-v3/`,densityBase:`https://raw.githubusercontent.com/HainaHuang729/21cmTB/${REVISION}/viewer-lab/data/pl-density128-v1/`},
-  bt: {label:'BT · 250 cMpc', base:`https://raw.githubusercontent.com/HainaHuang729/21cmTB/${REVISION}/viewer-lab/data/bt-thermal-fixed-v2/`,densityBase:`https://raw.githubusercontent.com/HainaHuang729/21cmTB/${REVISION}/viewer-lab/data/bt-density128-v1/`},
+  pl: {label:'PL · 250 cMpc', base:`https://raw.githubusercontent.com/HainaHuang729/21cm-cosmic-dawn-atlas/${REVISION}/viewer-lab/data/pl-thermal-fixed-v3/`,densityBase:`https://raw.githubusercontent.com/HainaHuang729/21cm-cosmic-dawn-atlas/${REVISION}/viewer-lab/data/pl-density128-v1/`},
+  bt: {label:'BT · 250 cMpc', base:`https://raw.githubusercontent.com/HainaHuang729/21cm-cosmic-dawn-atlas/${REVISION}/viewer-lab/data/bt-thermal-fixed-v2/`,densityBase:`https://raw.githubusercontent.com/HainaHuang729/21cm-cosmic-dawn-atlas/${REVISION}/viewer-lab/data/bt-density128-v1/`},
   legacy: {label:'PL · 100 cMpc', base:GITHUB_ROOT+'viewer/data/coeval-f-star10-m1p3-d2fb547ce0/'},
 };
 export const FIELDS = {
