@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>21cm · PSX-emu 模拟器</title>
+  <link rel="preload" href="./assets/fonts/jost-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./cavity.css?v=quiet-toggle-20261018">
+  <link rel="stylesheet" href="./explorer.css">
+</head>
+<body class="cavity-page explorer-page">
+  <header class="sample-header">
+    <a class="sample-brand" href="./">21<span>cm</span><i aria-hidden="true"></i></a>
+    <div class="sample-heading">
+      <h1>PSX-emu v1.0 模拟器</h1>
+      <p>100k 21cmFAST 模拟 · 4 项 ARD-GP 残差补丁 · 3 路 8D MCMC</p>
+    </div>
+    <nav class="portal-nav" aria-label="21cm 统一视图">
+      <a href="./cavity.html"><small>3D</small>体数据</a>
+      <a href="./atlas.html"><small>2D</small>切片库</a>
+      <a href="./explorer.html"><small>1D</small>参数与推断</a>
+      <a href="./emulator.html" aria-current="page"><small>EMU</small>模拟器</a>
+    </nav>
+    <nav class="field-switch emulator-views" aria-label="模拟器子视图">
+      <button type="button" data-view="overview" aria-pressed="true">模拟器概览</button>
+      <button type="button" data-view="data" aria-pressed="false">样本分析</button>
+      <button type="button" data-view="validation" aria-pressed="false">模型验证</button>
+      <button type="button" data-view="random_ic" aria-pressed="false">Random IC</button>
+    </nav>
+    <a id="emulator-external" class="explorer-ext" href="https://hainahuang729.github.io/21cm-reionization-emulator/" target="_blank" rel="noopener">新窗口 ↗</a>
+  </header>
+
+  <main class="explorer-main">
+    <div class="explorer-bar">
+      <span id="emulator-view-label" class="explorer-subtitle">PSX-emu v1.0 · 100k 再电离与 21 cm 功率谱模拟器概览</span>
+      <div class="explorer-links" aria-label="关联仓库">
+        <a href="https://github.com/HainaHuang729/early-galaxies-reionization-bt" target="_blank" rel="noopener">Track A PRD ↗</a>
+        <a href="https://github.com/HainaHuang729/21cm-reionization-emulator" target="_blank" rel="noopener">Track B Emulator ↗</a>
+        <a href="https://github.com/HainaHuang729/21cm-cosmic-dawn-atlas" target="_blank" rel="noopener">Data Archive ↗</a>
+      </div>
+    </div>
+    <div class="explorer-stage">
+      <iframe
+        id="emulator-frame"
+        title="PSX-emu v1.0 交互式再电离与 21 cm 功率谱模拟器"
+        src="https://hainahuang729.github.io/21cm-reionization-emulator/?embed=1"
+        loading="eager"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <div id="emulator-loading" class="explorer-loading" role="status">正在加载 PSX-emu 交互式模拟器页面…</div>
+      <div id="emulator-fallback" class="explorer-fallback" hidden>
+        <p>嵌入视图加载较慢或被当前网络拦截，可直接在新窗口打开完整模拟器展示页：</p>
+        <a id="emulator-fallback-link" href="https://hainahuang729.github.io/21cm-reionization-emulator/" target="_blank" rel="noopener">打开 21cm-reionization-emulator ↗</a>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./emulator.js"></script>
+</body>
+</html>
